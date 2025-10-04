@@ -34,6 +34,8 @@ The system operates on an iterative, autonomous loop that requires **no LLM fine
 * **💡 Few-Shot Capability:** Adapts to different scenarios with just a few examples.
 * **📜 High Explainability:** The entire reasoning process ("scratchpad") is transparent and interpretable, showing a clear decision path from problem to solution.
 ---
+![model](./model.png)
+---
 ## 📦 File Structure
 
 ```bash
@@ -50,6 +52,24 @@ BMKG-DCoT/
     ├── graph.json                     # The Bridge Maintenance Knowledge Graph.
     └── data.json                      # The dataset containing questions and ground truth answers.
 ```
+---
+## 🗂 BMKG 
+
+We release a de-identified BMKG dataset for research only.
+
+#### `graph.json`
+- Nodes: bridge name, component code/part, defect location, defect, maintenance measure, etc.
+  - Typical fields: `id`, `type`, `name`, and optional attributes.
+- Edges: relations such as `bridge -> component`, `component -> part`, `location -> defect`, `defect -> measure`.
+  - Typical fields: `source`, `target`, `relation`.
+
+#### `data.json`
+- Includes at least: `qid`, `question`, and `answer` for evaluation or demonstration.
+
+### Usage & Ethics
+- For academic research only.
+- Any re-identification attempts or commercial use are strictly prohibited.
+- Please acknowledge this dataset ("de-identified BMKG") when publishing results.
 ---
 ## 🚀 Quick start
 
