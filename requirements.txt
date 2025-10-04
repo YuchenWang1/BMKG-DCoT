@@ -1,0 +1,11 @@
+faiss==1.7.4
+jsonlines==4.0.0
+langchain_community==0.3.30
+networkx==3.1
+numpy==1.24.3
+openai==2.0.1
+pandas==2.0.3
+sentence_transformers==2.2.2
+torch==2.4.1
+tqdm==4.67.1
+zhipuai==1.0.7
