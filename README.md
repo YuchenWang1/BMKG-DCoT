@@ -162,11 +162,12 @@ python run.py \
 
 Please cite this paper the "Yuchen Wang, Yanjie Zhu, Wen Xiong, C.S. Cai. "BMKG-DCoT: Decision-making Chain of Thought on Bridge Maintenance Knowledge Graphs." in your publications.  
 For collaborations and questions, please open an issue.
+
 ---
 
 ## 🌐 A Note on Language Support / 关于语言支持的说明
 
-Please note that the current experimental data is derived from Chinese inspection reports. Consequently, the knowledge graph and the current codebase are primarily designed and tested for Chinese.
+Please note that the current experimental data is derived from `Chinese inspection reports`. Consequently, the knowledge graph and the current codebase are primarily designed and tested for `Chinese`.
 
 While we have included translated English prompts in the prompt files, they have not been fully tested yet. We plan to release a version fully adapted for English datasets in a future update. Stay tuned!
 
