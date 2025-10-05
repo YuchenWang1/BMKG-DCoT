@@ -28,11 +28,10 @@ The system operates on an iterative, autonomous loop that requires **no LLM fine
 ## ✨ Key Features
 
 * **🤖 LLM-Powered Reasoning:** Leverages state-of-the-art LLMs (Gemini, GPT, and more) to drive a dynamic Chain-of-Thought process.
-* **🕸️ Knowledge Graph Interaction:** Performs targeted and efficient information retrieval from a structured Bridge Maintenance Knowledge Graph.
+* **🕸️ Knowledge Graph Interaction:** Performs targeted and efficient information retrieval from a structured BMG.
 * **🔍 Semantic Search:** Implements fast and accurate semantic similarity searches for bridge components and defects.
-* **🧭 Multi-Path Exploration:** Utilizes a beam search algorithm to evaluate multiple reasoning chains, enhancing the robustness of the final decision.
 * **💡 Few-Shot Capability:** Adapts to different scenarios with just a few examples.
-* **📜 High Explainability:** The entire reasoning process ("scratchpad") is transparent and interpretable, showing a clear decision path from problem to solution.
+* **📜 High Explainability:** The entire reasoning process is transparent, showing a clear decision path from problem to solution.
 ---
 ![model](./model.png)
 ---
@@ -52,24 +51,6 @@ BMKG-DCoT/
     ├── graph.json                     # The Bridge Maintenance Knowledge Graph.
     └── data.json                      # The dataset containing questions and ground truth answers.
 ```
----
-## 🗂 BMKG 
-
-We release a de-identified BMKG dataset for research only.
-
-#### `graph.json`
-- Nodes: bridge name, component code/part, defect location, defect, maintenance measure, etc.
-  - Typical fields: `id`, `type`, `name`, and optional attributes.
-- Edges: relations such as `bridge -> component`, `component -> part`, `location -> defect`, `defect -> measure`.
-  - Typical fields: `source`, `target`, `relation`.
-
-#### `data.json`
-- Includes at least: `qid`, `question`, and `answer` for evaluation or demonstration.
-
-### Usage & Ethics
-- For academic research only.
-- Any re-identification attempts or commercial use are strictly prohibited.
-- Please acknowledge this dataset ("de-identified BMKG") when publishing results.
 ---
 ## 🚀 Quick start
 
@@ -158,17 +139,36 @@ python run.py \
 * `--max_steps`: Maximum number of reasoning steps the agent can take.
 
 ---
-## ✉️ Citation & Contact
+## 🗂 BMKG 
 
-Please cite this paper the "Yuchen Wang, Yanjie Zhu, Wen Xiong, C.S. Cai. "BMKG-DCoT: Decision-making Chain of Thought on Bridge Maintenance Knowledge Graphs." in your publications.  
-For collaborations and questions, please open an issue.
+We release a de-identified BMKG dataset for research only.
+
+#### `graph.json`
+- Nodes: bridge name, component code/part, defect location, defect, maintenance measure, etc.
+  - Typical fields: `id`, `type`, `name`, and optional attributes.
+- Edges: relations such as `bridge -> component`, `component -> part`, `location -> defect`, `defect -> measure`.
+  - Typical fields: `source`, `target`, `relation`.
+
+#### `data.json`
+- Includes at least: `qid`, `question`, and `answer` for evaluation or demonstration.
+
+### Usage & Ethics
+- For academic research only.
+- Any re-identification attempts or commercial use are strictly prohibited.
+- Please acknowledge this dataset ("de-identified BMKG") when publishing results.
 
 ---
 
-## 🌐 A Note on Language Support / 关于语言支持的说明
+## 🌐 A Note on Language Support
 
 Please note that the current experimental data is derived from `Chinese inspection reports`. Consequently, the knowledge graph and the current codebase are primarily designed and tested for `Chinese`.
 
 While we have included translated English prompts in the prompt files, they have not been fully tested yet. We plan to release a version fully adapted for English datasets in a future update. Stay tuned!
+  
+---
+## ✉️ Citation & Contact
+
+Please cite this paper the "Yuchen Wang, Yanjie Zhu, Wen Xiong, C.S. Cai. "BMKG-DCoT: Decision-making Chain of Thought on Bridge Maintenance Knowledge Graphs." in your publications.  
+For collaborations and questions, please open an issue.
 
 
